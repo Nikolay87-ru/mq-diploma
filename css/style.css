@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans-Regular';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'OpenSans-Bold';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
