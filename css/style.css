@@ -180,7 +180,7 @@ p {
 /*-- background --*/
 
 .header__background-image {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
