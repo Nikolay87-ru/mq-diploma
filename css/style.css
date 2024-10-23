@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'OpenSans-Regular';
+  font-family: 'OpenSans';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans-Bold';
+  font-family: 'OpenSans';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -67,13 +67,6 @@ select {
   text-transform: none;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -109,7 +102,6 @@ textarea {
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -304,10 +296,6 @@ p {
   padding-inline: 33px;
   margin-inline: 22px;
   margin-bottom: 16px;
-}
-
-.trands__card-tags {
-  /* display: flex; */
 }
 
 .trands__card-title {
