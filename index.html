@@ -21,15 +21,15 @@
         <div class="header__logo-menu">
           <div class="header__logo"><a href="#0"><img src="./svg/noemi-logo.svg" alt="noemi-logo"></a>
           </div>
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">главная</a> </li>
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">посты</a></li>
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">статьи</a></li>
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">теги</a></li>
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">темы</a></li>
-                <li class="header__nav-button"><a class="header__nav-items" href="#0">контакты</a></li>
-              </ul>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">главная</a> </li>
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">посты</a></li>
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">статьи</a></li>
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">теги</a></li>
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">темы</a></li>
+              <li class="header__nav-button"><a class="header__nav-items" href="#0">контакты</a></li>
+            </ul>
           </nav>
         </div>
 
@@ -43,7 +43,8 @@
   <input type="checkbox" id="pop-up-toggle" class="pop-up-toggle" hidden>
   <div class="pop-up">
     <label for="pop-up-toggle">
-    <img src="./svg/form-x.svg" alt="кнопка close" class="pop-up__x-img">
+      <span class="visually-hidden">Закрыть форму</span>
+      <img src="./svg/form-x.svg" alt="кнопка close" class="pop-up__x-img">
     </label>
 
     <div class="pop-up__position">
@@ -51,6 +52,7 @@
     </div>
     <form class="pop-up__form">
       <label class="pop-up__select-group">
+        <span class="visually-hidden">Выбрать вариант ответа</span>
         <span class="pop-up__select-label">Как часто вы заходите на сайт?</span>
         <select class="select">
           <option value="almost" selected>Почти каждый день</option>
@@ -62,15 +64,19 @@
       </label>
     </form>
     <form class="pop-up__subscribe">
+      <span class="visually-hidden">Выбрать вариант ответа</span>
       <label class="pop-up__subscribe-title">Вы подписаны на e-mail рассылку?</label>
+      <span class="visually-hidden">да</span>
       <input type="radio" name="subscribe-option" id="yes" value="yes" checked>
       <label for="yes" class="subscribe-yes">Да</label>
+      <span class="visually-hidden">Нет</span>
       <input type="radio" name="subscribe-option" id="no" value="yes">
       <label for="no" class="subscribe-no">Нет</label>
     </form>
     <form class="pop-up__extra-info">
+      <span class="visually-hidden">Заполните форму</span>
       <label for="pop-up__extra">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-      <textarea id="pop-up__extra" name="pop-up__extra" rows="3" cols="40">Может, больше рецептов?</textarea>
+      <textarea id="pop-up__extra" name="pop-up__extra" rows="3" cols="38">Может, больше рецептов?</textarea>
 
       <div class="pop-up__button">
         <button class="pop-up__submission" type="submit">отправить</button>
@@ -79,9 +85,9 @@
   </div>
   <div class="pop-up__image-form">
     <label for="pop-up-toggle">
-        <img src="./svg/pop-up_form.svg" alt="pop-up форма" class="pop-up-toggle__svg">
+      <img src="./svg/pop-up_form.svg" alt="pop-up форма" class="pop-up-toggle__svg">
     </label>
-</div>
+  </div>
   <div id="overlay" class="overlay"></div>
 
   <!--------- TRANDS  --------->
@@ -92,46 +98,53 @@
 
       <article class="trands__card-item trands__image-first">
         <div class="trands__card-content">
-          <div class="trands__card-tags">
-            <ul class="trands__card-list">
-              <li><a class="trands__tags-item" href="#0">lifestyle</a></li>
-              <li><a class="trands__tags-item" href="#0">interior</a></li>
-            </ul>
+          <div class="trands__card-container">
+            <div class="trands__card-tags">
+              <ul class="trands__card-list">
+                <li><a class="trands__tags-item" href="#0">lifestyle</a></li>
+                <li><a class="trands__tags-item" href="#0">interior</a></li>
+              </ul>
+            </div>
+            <h2 class="trands__card-title first-title">сейчас в тренде: сад на подоконнике</h2>
           </div>
-          <h2 class="trands__card-title first-title">сейчас в тренде: сад 
-            на подоконнике</h2>
         </div>
       </article>
       <article class="trands__card-item trands__image-second">
         <div class="trands__card-content">
-          <div class="trands__card-tags">
-            <ul class="trands__card-list">
-              <li><a class="trands__tags-item" href="#0">food</a></li>
-            </ul>
+          <div class="trands__card-container">
+            <div class="trands__card-tags">
+              <ul class="trands__card-list">
+                <li><a class="trands__tags-item" href="#0">food</a></li>
+              </ul>
+            </div>
+            <h2 class="trands__card-title">сыры на красивых картинках из интернета: какие они на вкус?</h2>
           </div>
-          <h2 class="trands__card-title">сыры на красивых картинках из интернета: какие они на вкус?</h2>
         </div>
       </article>
       <article class="trands__card-item trands__image-thrid">
         <div class="trands__card-content">
-          <div class="trands__card-tags">
-            <ul class="trands__card-list thrid-tags">
-              <li><a class="trands__tags-item" href="#0">lifestyle</a></li>
-              <li><a class="trands__tags-item" href="#0">travel</a></li>
-            </ul>
+          <div class="trands__card-container">
+            <div class="trands__card-tags">
+              <ul class="trands__card-list thrid-tags">
+                <li><a class="trands__tags-item" href="#0">lifestyle</a></li>
+                <li><a class="trands__tags-item" href="#0">travel</a></li>
+              </ul>
+            </div>
+            <h2 class="trands__card-title thrid-title">собираемся в первый поход в горы</h2>
           </div>
-          <h2 class="trands__card-title thrid-title">собираемся в первый поход в горы</h2>
         </div>
       </article>
       <article class="trands__card-item trands__image-fourth">
         <div class="trands__card-content">
-          <div class="trands__card-tags">
-            <ul class="trands__card-list fourth-tags">
-              <li><a class="trands__tags-item" href="#0">food</a></li>
-              <li><a class="trands__tags-item" href="#0">health</a></li>
-            </ul>
+          <div class="trands__card-container">
+            <div class="trands__card-tags">
+              <ul class="trands__card-list fourth-tags">
+                <li><a class="trands__tags-item" href="#0">food</a></li>
+                <li><a class="trands__tags-item" href="#0">health</a></li>
+              </ul>
+            </div>
+            <h2 class="trands__card-title fourth-title">сейчас в тренде: сколько витамина c в лимонах?</h2>
           </div>
-          <h2 class="trands__card-title fourth-title">сейчас в тренде: сколько витамина c в лимонах?</h2>
         </div>
       </article>
     </div>
@@ -140,7 +153,7 @@
 
   <!--------- MAIN  --------->
 
-<div class="wrapper">
+  <div class="wrapper">
     <main class="main">
       <section class="posts">
 
@@ -284,11 +297,11 @@
             </div>
           </div>
         </article>
-      </section> 
+      </section>
 
-  <!--------- ASIDE  --------->
+      <!--------- ASIDE  --------->
 
-<aside class="aside">
+      <aside class="aside">
 
         <section class="aside__latest-posts">
           <div class="aside__title">
@@ -353,11 +366,11 @@
                 <h3 class="aside__post-title_h3"><a href="#0">лучшие прически для распущенных волос</a></h3>
               </div>
             </div>
-          </article> 
+          </article>
 
-  <!-- search form -->
+          <!-- search form -->
 
- <div class="search-form">
+          <div class="search-form">
             <form class="search">
               <label class="search-row">
                 <span class="visually-hidden">Введите ваш поисковый запрос</span>
@@ -367,11 +380,11 @@
                   поисковый запрос</span></button>
             </form>
           </div>
-        </section> 
+        </section>
 
-  <!-- email form  -->
+        <!-- email form  -->
 
-<section class="mailing-tags">
+        <section class="mailing-tags">
           <div class="aside__title-mailing">
             <h2 class="aside__section-title">рассылка</h2>
           </div>
@@ -382,9 +395,9 @@
             </label>
             <button class="email-button"><span class="visually-hidden">Отправить ваш email</span>подписаться</button>
           </form>
-        </section> 
+        </section>
 
-  <!-- tags -->
+        <!-- tags -->
 
         <section class="aside__tags-section">
           <div class="aside__title">
@@ -402,38 +415,49 @@
               <li><a href="#0">health</a></li>
             </ul>
           </div>
-        </section> 
+        </section>
 
-  <!-- themes -->
+        <!-- themes -->
 
-<section class="aside__themes">
+        <section class="aside__themes">
           <div class="aside__title">
-            <h2 class="aside__section-title">темы</h2>
+            <h2 class="aside__section-title title-themes">темы</h2>
           </div>
           <div class="aside__themes-list">
             <ul class="themes-list">
-              <li class="themes-list-item"><a class="themes-item" href="#0">Красота<span class="aside__text-decoration">12</span></a></li>
-              <li class="themes-list-item"><a class="themes-item" href="#0">Здоровье<span class="aside__text-decoration">4</span></a></li>
-              <li class="themes-list-item"><a class="themes-item" href="#0">Образ жизни<span class="aside__text-decoration">145</span></a></li>
-              <li class="themes-list-item"><a class="themes-item" href="#0">Музыка<span class="aside__text-decoration">28</span></a></li>
-              <li class="themes-list-item"><a class="themes-item" href="#0">Спорт<span class="aside__text-decoration">62</span></a></li>
-              <li class="themes-list-item"><a class="themes-item" href="#0">Йога<span class="aside__text-decoration">8</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Красота<span
+                    class="aside__text-decoration">12</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Здоровье<span
+                    class="aside__text-decoration">4</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Образ жизни<span
+                    class="aside__text-decoration">145</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Музыка<span
+                    class="aside__text-decoration">28</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Спорт<span
+                    class="aside__text-decoration">62</span></a></li>
+              <li class="themes-list-item"><a class="themes-item" href="#0">Йога<span
+                    class="aside__text-decoration">8</span></a></li>
             </ul>
           </div>
-        </section> 
-  </aside>
-  </main>
+        </section>
+      </aside>
+    </main>
   </div>
 
   <!--------- SHOP  --------->
 
-<section class="shop">
+  <section class="shop">
     <div class="wrapper">
       <h2 class="shop__title">наши изделия</h2>
       <div class="shop__cards">
         <article class="shop__selling-item">
-          <img src="./img/shop-item-desk1.jpg" class="shop__card-preview" alt="Подушки на диван">
-          <div class="shop__card-item">
+          <picture>
+            <source srcset="./img/shop-item-desk1.jpg" media="(min-width: 1201px)">
+            <source srcset="./img/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+            <source srcset="./img/shop-item-mobile1.jpg" media="(max-width: 640px)"> 
+            <img src="./img/shop-item-desk1.jpg" class="shop__card-preview" alt="Подушки на диван">
+          </picture>
+          <div class="shop__card-item shop__first-item">
             <h2 class="shop__card-title">подушки на диван</h2>
             <p class="shop__card-desc">Набор из двух подушек с модными принтами. Видео о создании <a href="#0"
                 class="shop__desc-link">здесь</a>.</p>
@@ -450,8 +474,13 @@
         </article>
 
         <article class="shop__selling-item">
-          <img src="./img/shop-item-desk2.jpg" class="shop__card-preview" alt="Подушки на диван">
-          <div class="shop__card-item">
+          <picture>
+            <source srcset="./img/shop-item-desk2.jpg" media="(min-width: 1201px)">
+            <source srcset="./img/shop-item-tablet2.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+            <source srcset="./img/shop-item-mobile2.jpg" media="(max-width: 640px)">
+            <img src="./img/shop-item-desk2.jpg" class="shop__card-preview" alt="Кукла заяц">
+          </picture>
+          <div class="shop__card-item shop__second-item">
             <h2 class="shop__card-title">кукла «зайчик»</h2>
             <p class="shop__card-desc">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0"
                 class="shop__desc-link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -467,8 +496,13 @@
         </article>
 
         <article class="shop__selling-item">
-          <img src="./img/shop-item-desk3.jpg" class="shop__card-preview" alt="Подушки на диван">
-          <div class="shop__card-item">
+          <picture>
+            <source srcset="./img/shop-item-desk3.jpg" media="(min-width: 1201px)">
+            <source srcset="./img/shop-item-tablet3.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+            <source srcset="./img/shop-item-mobile3.jpg" media="(max-width: 640px)">
+            <img src="./img/shop-item-desk3.jpg" class="shop__card-preview" alt="Шестиугольная рамка">
+          </picture>
+          <div class="shop__card-item shop__thrid-item">
             <h2 class="shop__card-title">шестиугольная рамка</h2>
             <p class="shop__card-desc">Необычная рамка для украшения дома из видео <a href="#0"
                 class="shop__desc-link">«Как сделать рамку из подручных средств за 30 минут»</a>.</p>
@@ -485,23 +519,26 @@
         </article>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!--------- FOOTER  --------->
 
-<footer class="footer">
+  <footer class="footer">
     <div class="wrapper">
       <address class="footer__address">
         <ul class="footer__address-list">
-          <li class="footer__address-item"><a href="dribbble" class="footer__social-icon"><span class="visually-hidden">Профиль компании в
+          <li class="footer__address-item"><a href="dribbble" class="footer__social-icon"><span
+                class="visually-hidden">Профиль компании в
                 dribbble</span>
               <img src="./svg/001-dribbble.svg" alt="dribbble" class="footer__social-icon_image">
             </a></li>
-          <li class="footer__address-item"><a href="pinterest" class="footer__social-icon"><span class="visually-hidden">Профиль компании в
+          <li class="footer__address-item"><a href="pinterest" class="footer__social-icon"><span
+                class="visually-hidden">Профиль компании в
                 pinterest</span>
               <img src="./svg/002-pinterest.svg" alt="pinterest" class="footer__social-icon_image">
             </a></li>
-          <li class="footer__address-item"><a href="tumblr" class="footer__social-icon"><span class="visually-hidden">Профиль компании в
+          <li class="footer__address-item"><a href="tumblr" class="footer__social-icon"><span
+                class="visually-hidden">Профиль компании в
                 tumblr</span>
               <img src="./svg/003-tumblr.svg" alt="tumblr" class="footer__social-icon_image">
             </a></li>
@@ -509,7 +546,7 @@
       </address>
       <small class="footer__copyright">Copyright © 2009–2019 City Blog LLC.</small>
     </div>
-  </footer> 
+  </footer>
 </body>
 
 </html>
