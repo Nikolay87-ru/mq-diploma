@@ -409,8 +409,8 @@ textarea {
   outline: none;
   background-color: var(--color-mint-cream);
   height: 90px;
-  resize: none;
-  padding: 21px;
+  padding-block: 21px;
+  padding-inline: 21px 35px;
 
   color: var(--color-gray);
 
