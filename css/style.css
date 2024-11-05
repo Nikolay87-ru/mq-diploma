@@ -38,6 +38,7 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 img {
@@ -411,6 +412,7 @@ textarea {
   height: 90px;
   padding-block: 21px;
   padding-inline: 21px 35px;
+  resize: none;
 
   color: var(--color-gray);
 
@@ -453,7 +455,7 @@ textarea {
   z-index: 10;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 5px 100%, 0 40px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5px 100%, 0 47px);
 
   &:hover {
     background: rgba(255, 255, 255, 1);
@@ -535,17 +537,24 @@ textarea {
   border: 3px solid var(--color-gold);
   padding-block: 35px 33px;
   padding-inline: 32px;
-  margin-inline: 20px 21px;
   margin-bottom: 16px;
   position: absolute;
   bottom: 0;
+
+  &:nth-child(-n + 2) {
+    margin-inline: 20px 21px;
+  }
+}
+
+.trands__card-item:nth-child(n + 3) .trands__card-content {
+  margin-inline: 25px 21px;
 }
 
 .trands__card-title {
   font-family: var(--font-family-bold);
   font-size: var(--font-size-title);
   margin: 0;
-
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   color: var(--color-white);
   display: inline;
@@ -564,12 +573,7 @@ textarea {
   margin: 0;
   margin-bottom: 10px;
   padding-left: 0px;
-  gap: 16px;
-}
-
-.thrid-tags,
-.fourth-tags {
-  margin-left: 5px;
+  gap: 17px;
 }
 
 .trands__tags-item {
@@ -706,15 +710,18 @@ p + p {
   max-width: 272px;
 }
 
+.aside__title {
+  padding-left: 12px;
+}
+
 .aside__section-title {
   display: block;
   text-align: center;
   font-family: var(--font-family-bold);
   font-size: var(--font-size-tags-aside);
   text-transform: uppercase;
-  padding-left: 12px;
 
-  &:after {
+  &::after {
     content: "";
     display: flex;
     width: 66px;
@@ -737,7 +744,7 @@ p + p {
   }
 
   &:last-of-type {
-    margin-bottom: 34px;
+    margin-bottom: 54px;
   }
 
   &:first-of-type h3 {
@@ -819,7 +826,7 @@ p + p {
 /*-- email --*/
 
 .aside__title-mailing {
-  padding-right: 10px;
+  padding-inline: 10px;
 }
 
 .email {
@@ -869,7 +876,7 @@ p + p {
   padding: 0 11px 21px 20px;
   line-height: 1;
 
-  &:after {
+  &::after {
     content: "";
     display: flex;
     width: 66px;
@@ -926,7 +933,7 @@ p + p {
   padding: 0 11px 10px 23px;
   line-height: 1;
 
-  &:after {
+  &::after {
     content: "";
     display: flex;
     width: 66px;
@@ -946,7 +953,7 @@ p + p {
   font-size: var(--font-size-tags-aside);
   line-height: 47px;
 
-  &:after {
+  &::after {
     content: "";
     display: flex;
     width: 271px;
@@ -999,7 +1006,8 @@ p + p {
 .shop__card-item {
   outline: 3px solid var(--color-gold);
   outline-offset: 21px;
-  height: 220px;
+  height: auto;
+  min-height: 220px;
   margin-top: -10px;
   padding-top: 1px;
 }
@@ -1116,6 +1124,8 @@ p + p {
   line-height: 4rem;
 }
 
+/*----------- MEDIA QUARIES -------------*/
+
 @media (max-width: 1200px) {
   .wrapper {
     padding-inline: clamp(5px, 4.5vw, 85px);
@@ -1159,8 +1169,8 @@ p + p {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 12px;
-    right: 55px;
+    top: 40px;
+    right: 75px;
     gap: 5px;
     z-index: 4;
   }
@@ -1173,8 +1183,8 @@ p + p {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 30px;
-    right: 16px;
+    top: 50px;
+    right: 36px;
     width: 23px;
     height: 23px;
     justify-content: space-around;
@@ -1255,11 +1265,6 @@ p + p {
     gap: 4px;
   }
 
-  .trands__card-item {
-    display: flex;
-    align-items: flex-end;
-  }
-
   .trands__card-content {
     border: 3px solid var(--color-gold);
     padding-block: 15px;
@@ -1272,13 +1277,15 @@ p + p {
   }
 
   .trands__card-item {
+    display: flex;
+    align-items: flex-end;
     width: calc(25% - 4px);
     min-height: 247px;
   }
 
   .trands__card-list {
     margin-bottom: 6px;
-    gap: 10px;
+    gap: 6px;
   }
 
   .thrid-tags {
@@ -1296,6 +1303,7 @@ p + p {
       var(--font-size-title-mobile)
     );
     line-height: clamp(2.2rem, 2.5vw, 2.4rem);
+    letter-spacing: 0.06rem;
   }
 
   /* main */
@@ -1383,7 +1391,7 @@ p + p {
 
   .aside__new-post {
     &:last-of-type {
-      margin-bottom: 37px;
+      margin-bottom: 57px;
     }
   }
 
@@ -1414,19 +1422,18 @@ p + p {
     color: var(--color-black);
     text-transform: uppercase;
     cursor: pointer;
-    margin-block: 30px 2px;
+    margin-block: 28px 2px;
   }
 
   .shop__card-item {
     outline: 3px solid var(--color-gold);
     outline-offset: 19px;
-    height: 220px;
     margin-top: -10px;
     padding-top: 1px;
   }
 
   .shop__thrid-item {
-    height: 195px;
+    min-height: 195px;
     margin-top: -20px;
     padding-top: 10px;
   }
@@ -1446,8 +1453,28 @@ p + p {
   /* trands */
 
   .trands__card-item {
-    width: calc(50% - 4px);
+    width: calc(50% - 2px);
     min-height: 247px;
+  }
+
+  .trands__card-content {
+    padding-block: 30px 28px;
+    padding-inline: 33px;
+    margin-bottom: 16px;
+    letter-spacing: normal;
+
+    &:nth-child(-n + 2) {
+      margin-inline: 19px 17px;
+    }
+  }
+
+  .trands__card-item:nth-child(n + 3) .trands__card-content {
+    margin-inline: 19px 17px;
+  }
+
+  .trands__card-list {
+    margin-bottom: 10px;
+    gap: 17px;
   }
 }
 
@@ -1510,6 +1537,10 @@ p + p {
     margin-right: 7px;
   }
 
+  .main__post-sign {
+    margin-top: 7px;
+  }
+
   p + p {
     margin-top: -15px;
   }
@@ -1517,8 +1548,8 @@ p + p {
   .main__post-title {
     font-size: var(--font-size-title-mobile);
     line-height: 1.2;
-    padding: 0px 0px 5px 0;
-    margin-right: 0px;
+    padding: 0px;
+    margin: 0px;
   }
 
   p {
@@ -1564,13 +1595,21 @@ p + p {
       var(--font-size-title-tablet)
     );
     line-height: clamp(2rem, 3.5vw, 2.2rem);
+    letter-spacing: 0.01rem;
   }
 
   .trands__card-content {
-    padding-block: 32px 27px;
+    padding-block: 27px;
     padding-inline: 20px;
-    margin-inline: 15px 17px;
     margin-bottom: 16px;
+
+    &:nth-child(-n + 2) {
+      margin-inline: 15px 17px;
+    }
+  }
+
+  .trands__card-item:nth-child(n + 3) .trands__card-content {
+    margin-inline: 15px 17px;
   }
 
   /* burger-menu */
@@ -1611,9 +1650,12 @@ p + p {
     margin: 0 0 2px 0px;
     justify-content: center;
   }
+  .aside__title {
+    padding: 0px;
+  }
 
   .aside__title-mailing {
-    padding-right: 0px;
+    padding: 0px;
   }
 
   .email-field {
@@ -1659,7 +1701,7 @@ p + p {
 
   .shop__cards {
     flex-wrap: wrap;
-    gap: 45px 70px;
+    gap: 44px 70px;
     justify-content: flex-start;
     padding-inline: 20px 25px;
   }
@@ -1678,7 +1720,7 @@ p + p {
   }
 
   .shop__first-item {
-    height: 174px;
+    min-height: 174px;
   }
 
   .shop__card-desc {
@@ -1691,6 +1733,10 @@ p + p {
 
   .footer {
     margin-top: 62px;
+  }
+
+  .footer__copyright {
+    margin: 37px 0 41px 8px;
   }
 
   /* pop-up */
@@ -1728,6 +1774,13 @@ p + p {
   .trands__card-item {
     width: calc(50% - 4px);
     min-height: 247px;
+  }
+
+  .trands__card-content {
+    padding-block: 27px;
+    padding-inline: 10px;
+    margin-inline: 10px;
+    margin-bottom: 16px;
   }
 
   /* pop-up */
