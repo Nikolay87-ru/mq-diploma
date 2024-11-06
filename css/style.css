@@ -1279,7 +1279,7 @@ p + p {
   .trands__card-item {
     display: flex;
     align-items: flex-end;
-    width: calc(25% - 4px);
+    width: calc(25% - 3px);
     min-height: 247px;
   }
 
@@ -1772,7 +1772,7 @@ p + p {
   /* trands */
 
   .trands__card-item {
-    width: calc(50% - 4px);
+    width: calc(50% - 2px);
     min-height: 247px;
   }
 
